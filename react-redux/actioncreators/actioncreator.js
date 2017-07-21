@@ -1,5 +1,5 @@
 // increment
-export function increment(index) {
+export function addLink(link) {
   return {
     type: 'ADD_LINK',
     link

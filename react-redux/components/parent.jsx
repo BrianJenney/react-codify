@@ -1,28 +1,50 @@
 
-
 import React from 'react';
 
-//import the child component here
 import Child from './child';
+
+import { connect } from 'react-redux';
+import { addLink } from '../actioncreators/actioncreator';
+import { addComment } from '../actioncreators/actioncreator';
 
 class Parent extends React.Component{
 
 constructor(props){
   super(props)
+  console.log(this.props);
+  this.props.addLink('http://mylink.com');
 }
 
-//we will give this little guy (the child) some state from our parent component
-//in an xml-ish type of way:
 
 render(){
   return(
     <div>
       <h1>Parent Container</h1>
-      <Child/>
+      <Child childState={this.props.votes}/>
     </div>
   )
 }
 
 }
 
-export default Parent;
+//this is doing what the name implies:
+//it's giving the state defined in our reducers to the components
+const mapStateToProps = (state) => {
+    return {
+        votes: state.votes,
+        links: state.addToList
+    };
+};
+
+
+//this dispatches the action to the reducer and not directly from the component
+//adds more abstraction from the UI and that's what react is all about!
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addLink: (link) => dispatch(addLink(link))
+    };
+};
+
+//this is the redux magic connecting our action creator
+//state and dispatch events so they can form a holy react union
+export default connect(mapStateToProps, mapDispatchToProps)(Parent);

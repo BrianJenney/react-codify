@@ -1,9 +1,8 @@
 function addToList(state=[], action){
   switch (action.type) {
     case 'ADD_LINK':
-      return [...state,{
-        link: action.link
-      }]
+    console.log(action.link)
+      return [...state]
       break;
     default:
       return state
