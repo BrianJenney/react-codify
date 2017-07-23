@@ -7,6 +7,8 @@ import Child from './child';
 
 class Parent extends React.Component{
 
+//this is where we initialize the state or data for this component
+//we're gonna pass this data down to the child in our render method
 constructor(props){
   super(props)
   this.state = {

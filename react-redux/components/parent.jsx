@@ -11,7 +11,6 @@ class Parent extends React.Component{
 
 constructor(props){
   super(props)
-  console.log(this.props);
   this.props.addLink('http://mylink.com');
 }
 
