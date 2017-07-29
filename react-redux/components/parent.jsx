@@ -9,20 +9,20 @@ import { addComment } from '../actioncreators/actioncreator';
 
 class Parent extends React.Component{
 
-constructor(props){
-  super(props)
-  this.props.addLink('http://mylink.com');
-}
+  //call reducer function as test
+  constructor(props){
+    super(props)
+    this.props.addLink('http://mylink.com');
+  }
 
-
-render(){
-  return(
-    <div>
-      <h1>Parent Container</h1>
-      <Child childState={this.props.votes}/>
-    </div>
-  )
-}
+  render(){
+    return(
+      <div>
+        <h1>Parent Container</h1>
+        <Child childState={this.props.votes}/>
+      </div>
+    )
+  }
 
 }
 

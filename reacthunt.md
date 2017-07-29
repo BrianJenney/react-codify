@@ -3,10 +3,10 @@
 Let's Learn React!!!
 
 Before we start off, we will need to know a little more about React.
- 
+
 Work with a partner and work your way through this React Easter Egg Hunt, explaining concepts to each other, writing them down and then sharing with the rest of the class!
 
-** MAKE SURE YOU ARE EXPLAINING THESE CONCEPTS TO EACHOTHER IN PLAIN 'OL ENGLISH!!! 
+** MAKE SURE YOU ARE EXPLAINING THESE CONCEPTS TO EACHOTHER IN PLAIN 'OL ENGLISH!!!
 
 1. What is React?
 
@@ -26,6 +26,4 @@ Work with a partner and work your way through this React Easter Egg Hunt, explai
 
 9. Do a quick search for jobs requiring ReactJS in the Bay Area. Anything interesting you find or notice?
 
-10. What is webpack? What's is significance in React?
-
-
+10. What is webpack? What's its significance in React?
