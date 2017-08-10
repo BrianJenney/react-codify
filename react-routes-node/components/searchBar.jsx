@@ -10,19 +10,18 @@ constructor(props){
   super(props)
   this.state = {
                 searchTerm: '',
-                articles: [],
-                apiKey : 'fbb07d1a4e4f6f90c4509b27c2bc6938:9:73594931',
                 disabled : true
               }
             }
 
 handleChange=(e)=>{
-  this.setState({searchTerm : e.target.value});
+  this.setState({searchTerm : e.target.value,
+                  disabled: false});
 }
 
 searchArticles=()=>{
-  axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + this.state.searchTerm + '&api-key=' + this.state.apiKey).then((response)=>{
-    this.setState({articles: response.data.response.docs});
+  axios.get('http://localhost:8081/test').then((response)=>{
+    console.log(response);
   })
 }
 
@@ -47,7 +46,6 @@ render(){
        </div>
      </div>
 
-      <Articles articles={this.state.articles} />
     </div>
   )
 }

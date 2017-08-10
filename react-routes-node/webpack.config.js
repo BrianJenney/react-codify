@@ -1,7 +1,9 @@
+require('./server.js');
+
 var config = {
    entry: './index.js', //our point of entry that renders our react components
    output: {
-      path:'/public',
+      path: '/public',
       filename: 'bundle.js', //here is where our jsx will be transpiled to actual js that can live in our browser
    },
    devServer: {
