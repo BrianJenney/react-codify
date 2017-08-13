@@ -29,8 +29,11 @@ class App extends React.Component {
    }
 }
 
+
+
+export default App;
+
 //we export our component so we can use it anywhere else in the App
 //this modularity is what makes react so appealing to devs:
 //you can write a presentational component and re-use it anywhere without
 //reinventing the wheel
-export default App;
