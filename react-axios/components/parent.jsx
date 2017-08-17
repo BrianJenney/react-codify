@@ -2,6 +2,9 @@
 
 import React from 'react';
 
+//TODO: Here is where you will want to add your search bar and a button to fire off the API request
+//HINT: pass down the data you get back from the API request to your child component to render it
+
 //import the child component here
 import Child from './child';
 
@@ -11,8 +14,6 @@ constructor(props){
   super(props)
 }
 
-//we will give this little guy (the child) some state from our parent component
-//in an xml-ish type of way:
 
 render(){
   return(

@@ -13,6 +13,6 @@ app.use(function(req, res, next) {
 app.get('/test', function(req,res){
   res.send({
     name: 'Brian',
-    message: 'Hey motherfucker'
+    message: 'Hey'
   })
 })

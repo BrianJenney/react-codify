@@ -1,6 +1,8 @@
 //we must import react to use it in our app
 import React from 'react';
 
+import List from './List';
+
 //this is our component which extends our react object
 class Greeting extends React.Component {
 
@@ -13,7 +15,10 @@ class Greeting extends React.Component {
 
     //state is our data being held in this component
     //in this case it will be our greeting
-    this.state={greeting: 'Hello'};
+    this.state={
+      greeting: 'Hello',
+      username: 'Brian'
+    };
   }
 
   //this is our render function where the action takes place!
@@ -22,9 +27,12 @@ class Greeting extends React.Component {
   //but with one bracket instead of two... because react!
    render() {
       return (
-         <div>
-            {this.state.greeting}
-         </div>
+        <div>
+         <h1 className="text-center">
+            {this.state.greeting} {this.state.username}
+         </h1>
+         <List/>
+       </div>
       );
    }
 }

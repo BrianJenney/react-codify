@@ -2,6 +2,10 @@
 import React from 'react';
 import axios from 'axios';
 
+//TODO: Refactor this API request so that it takes in a user's input and fires off on a button click
+//You will need to remove the axios request from here and put it in your parent component
+//then pass down the state to this component -- feel free to rename components as well!
+
 class Child extends React.Component{
 
 //this is when the constructor function helps us out by
