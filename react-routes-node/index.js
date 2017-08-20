@@ -5,10 +5,6 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import Main from './components/main';
 import Child from './components/child';
 
-//using the react-dom render method, we access our html and
-//attach our react app at this connection point
-
-
 ReactDOM.render(
   <Router>
     <div>

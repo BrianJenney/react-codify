@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import SearchBar from './searchBar';
+import NodeAPI from './NodeAPI';
 
 import '../styles/master.scss';
 
@@ -10,7 +10,7 @@ class Main extends React.Component {
    render() {
       return (
          <div>
-           <SearchBar/>
+           <NodeAPI/>
          </div>
       );
    }
