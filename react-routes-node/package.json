@@ -20,6 +20,8 @@
     "babel-preset-stage-2": "^6.24.1",
     "bootstrap": "^3.3.7",
     "express": "^4.15.4",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.11.7",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.6.1",
