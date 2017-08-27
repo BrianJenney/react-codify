@@ -1,5 +1,5 @@
 
-**INSTALL BABEL PACKAGE SO YOU CAN WRITE JSX CODE IN YOUR TEXT EDITOR
+*INSTALL BABEL PACKAGE SO YOU CAN WRITE JSX CODE IN YOUR TEXT EDITOR*
 
 * To do this, begin by opening the Sublime package installer (Type: `ctrl/cmd+shift+p` Enter: `Install Package`).
 
