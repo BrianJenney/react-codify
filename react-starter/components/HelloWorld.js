@@ -2,7 +2,7 @@
 import React from 'react';
 
 //this is our component which extends our react object
-class Greeting extends React.Component {
+class HelloWorld extends React.Component {
 
   //this is a function allows us to access the parents props or state
   //don't worry, we will cover state later
@@ -12,18 +12,17 @@ class Greeting extends React.Component {
     super(props)
 
     //state is our data being held in this component
-    //in this case it will be our greeting
-    this.state={greeting: 'Hello'};
+    //in this case it will be your name
+    this.state={yourName: 'Codify Student'};
   }
 
   //this is our render function where the action takes place!
   //this function returns some jsx (think javascript xml)
-  //we put our variables in a curly bracket just like we do with angular
-  //but with one bracket instead of two... because react!
+  //we put our variables in a curly bracket
    render() {
       return (
          <div>
-            {this.state.greeting}
+            <h1 style={{textAlign: 'center'}}>Hello {this.state.yourName}!</h1>
          </div>
       );
    }
@@ -31,7 +30,7 @@ class Greeting extends React.Component {
 
 
 
-export default Greeting;
+export default HelloWorld;
 
 //we export our component so we can use it anywhere else in the App
 //this modularity is what makes react so appealing to devs:
