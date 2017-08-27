@@ -2,7 +2,7 @@
 import React from 'react';
 
 //import our components
-import Parent from './parent';
+import Crime from './crime';
 
 //this is our component which extends our react object
 class Main extends React.Component {
@@ -10,7 +10,7 @@ class Main extends React.Component {
    render() {
       return (
          <div>
-           <Parent/>
+           <Crime/>
          </div>
       );
    }

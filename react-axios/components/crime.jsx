@@ -6,7 +6,7 @@ import axios from 'axios';
 //You will need to remove the axios request from here and put it in your parent component
 //then pass down the state to this component -- feel free to rename components as well!
 
-class Child extends React.Component{
+class Crime extends React.Component{
 
 //this is when the constructor function helps us out by
 //giving access to the props or state from the parent
@@ -47,4 +47,4 @@ render(){
 
 }
 
-export default Child;
+export default Crime;
