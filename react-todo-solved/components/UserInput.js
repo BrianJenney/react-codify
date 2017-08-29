@@ -2,7 +2,7 @@ import React from 'react';
 
 import TaskList from './TaskList';
 
-class MyList extends React.Component{
+class UserInput extends React.Component{
 
   constructor(props){
     super(props)
@@ -51,4 +51,4 @@ class MyList extends React.Component{
 
 }
 
-export default MyList;
+export default UserInput;
