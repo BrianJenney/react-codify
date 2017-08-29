@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 //we import our component from our component folder to use here
-import App from './components/App.js';
+import UserInput from './components/UserInput.js';
 
 //using the react-dom render method, we access our html and
 //attach our react app at this connection point
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<UserInput />, document.getElementById('app'));
