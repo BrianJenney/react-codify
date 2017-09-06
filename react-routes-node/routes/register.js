@@ -21,16 +21,22 @@ db.once("open", function() {
 module.exports = function(app) {
 
   app.get("/test", function(req, res){
+    let userName = req.query.username;
+    //let email = req.query.email;
+    let pw = req.query.password;
 
     let newUser = {
-      username: 'Brian',
-      email: 'brianjenney@gmail.com',
-      password: '123mememe'
+      username: userName,
+      //email: email,
+      password: pw
     }
 
     var user = new User(newUser);
 
     user.save(function(err, doc){
+      if(err)
+        res.send(err);
+      else
       res.send(doc);
     })
   })

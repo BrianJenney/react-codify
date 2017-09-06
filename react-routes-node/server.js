@@ -14,4 +14,4 @@ app.use(function(req, res, next) {
 
 
 //ROUTES
-require('./routes/testroute.js')(app);
+require('./routes/register.js')(app);

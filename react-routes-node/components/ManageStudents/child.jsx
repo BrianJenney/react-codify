@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/master.scss';
+//import '../styles/master.scss';
 
 class Child extends React.Component {
 
