@@ -4,6 +4,10 @@
 
 (Name, web background, why you want to learn React?)
 
+if(!newClass){
+    (What do you know about React? Have them search for web dev jobs online: how many ask for React?)
+}
+
 **Slack out React Hunt(25 mins)**
 
 Everyone share their findings
@@ -50,7 +54,7 @@ Students should add some more properties to their state like where they are from
 
 Add each of these pieces of state into the jumbotron element.
 
-For the rest of class, have students create at least three more components for their page: 
+For the rest of class, have students create at least three more components (with State!!!) for their page: 
 
     1. Main section with a background image
 

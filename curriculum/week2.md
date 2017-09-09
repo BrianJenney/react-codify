@@ -46,6 +46,16 @@ Have students create their own functions that are triggered by button clicks.
 
 Have students create an input and attach an `onchange` event listener to pick up the value of the input. In state, add a `userInput` property and set its value to null. 
 
+***Example***
+
+<input onChange={this.onChange.bind(this)}/>
+
+onChange =(e)=>{
+    this.setState({userInput: e.target.value})
+}
+
+***End Example***
+
 When input changes it should `setState` of `userInput` to the value of the input. 
 
 You will likely need to explain how `this` is binding the value of the input to the state. (Remember object constructors)
