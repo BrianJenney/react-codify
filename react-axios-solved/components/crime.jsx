@@ -14,7 +14,8 @@ constructor(props){
   super(props)
   this.state = {
     crime: [],
-    type: 'DRUG/NARCOTIC'};
+    type: 'DRUG/NARCOTIC'
+    };
 }
 
 optionChange=(e)=>{
@@ -35,7 +36,7 @@ render(){
   return(
     <div>
       <div onChange={this.optionChange.bind(this)}>
-      
+
         <p>TYPE OF CRIME:</p>
 
         <input 

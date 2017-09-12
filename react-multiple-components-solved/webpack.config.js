@@ -11,20 +11,17 @@ var config = {
    module: {
        loaders: [
          {
-           test: /\.js|.jsx?$/,
+           test: /\.js?$/,
            exclude: /(node_modules|bower_components)/,
            loaders: [
              'babel-loader?presets[]=react,presets[]=es2015,presets[]=stage-2' //babel is what transpiles our jsx code into javascript
            ]
          },
          {
-            test: /\.scss$/,
-            loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
-          }
+          test: /\.(png|jpg)$/,
+          loader: 'file-loader'
+        }
        ]
-     },
-     resolve: {
-    extensions: ['.js', '.jsx'],
-  }
+     }
 }
 module.exports = config;

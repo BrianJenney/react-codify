@@ -2,15 +2,27 @@
 
 **Welcome && Introductions(10 mins)**
 
-(Name, web background, why you want to learn React?)
-
-if(!newClass){
-    (What do you know about React? Have them search for web dev jobs online: how many ask for React?)
-}
+What do you know about React? Have them search for web dev jobs online: how many ask for React?
 
 **Slack out React Hunt(25 mins)**
 
-Everyone share their findings
+Everyone share their findings.
+
+Is React just another trend?
+
+Well, yes && no... Sure, React will be replaced at some point by some other framework or library but component based architecture looks like it is here to stay and many other frameworks are borrowing from React. 
+
+So what's so great about this virtual DOM?
+
+The virtual DOM is an in-memory Javascript representation of the DOM. Usually on a DOM event, the page must re-paint itself and re-render the whole enchilada to show the changes from a button click for example. In React, the Virtual DOM saves unecessary trips to the DOM by looking at what parts of the DOM have changed through an event and then relay that info to the DOM when necessary, then only change that piece of the DOM that needs to be changed which makes for faster applications and web sites. 
+
+Everybody loves React so much there must be some downsides, what are they?
+
+First, React is JUST a UI library. If you want to tackle MVC using React you will need to bring in other libraries like Redux to handle large amounts of data, so React doesn't just solve complex apps out of the box.
+
+Second, there a ton of dependencies for starting a React project. Facebook has attempted to tackle this issue by offering their official React template for a starter project called `Create-React-App`. 
+
+Third, the learning curve can be steep! React is not a library you will learn in the next two sessions. This is meant to be an introduction into this ever-changing open source project. Take what you learn here and go out and build more things if you are serious about becoming a React pro!
 
 **Go through webpack, babel, ES6, file structure for a react project and answer questions along the way (30 mins):**
 
@@ -18,9 +30,19 @@ Navigate to `webpack.config.js`. Students will likely be confused by webpack - d
 
 Point out that there actually is no `bundle.js` file in our project -- that's because babel creates this file for us from our webpack on the fly so any browser can render our jsx.
 
+What is Babel?
+
+Babel is a transpiler that takes our super new, cool ES6,ES7,ES8, etc and converts it to ES5 syntax so nearly all browsers can run our Javascript. Some students may remember the tower of Babel from the Bible (the origin myth of why we all speak different languages) -- this is what Babel does, unifies all of the different syntaxes or languages and pops out a uniform JS syntax all browsers are happy with. 
+
+To show students the power of Babel, open up the code for react-starter and then run the project `npm start`. 
+
+Using your browser tools, inspect the first element on the page. Wait! It doesn't look anything like the code that is in the editor?! This is the power of Babel in action. It has taken our React JSX and made html components.
+
 Start at `index.html` and have students read through the comments on the page. `App` is where our app will be rendered on the page and we reference `bundle.js` for our transpiled JSX code.
 
 Open up `index.js` and show students how we get our JSX code to our index html file through the React DOM library, using `ReactDOM.render` to render our components. 
+
+ReactDOM takes in two parameters (a single HTML div or element and the HTML target where it will be rendered)
 
 We use `import` to include components as well as libraries like React into our code. 
 

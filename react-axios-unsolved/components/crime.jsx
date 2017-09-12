@@ -35,6 +35,7 @@ componentDidMount=()=>{
 render(){
   return(
     <div>
+    
       <p>Render Data Here</p>
         {this.state.crime.map(function(stat, i){
           return(

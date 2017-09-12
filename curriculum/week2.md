@@ -64,7 +64,7 @@ On a button click -- have a function console.log the value of `userInput`
 
 **Class Project (60mins)**
 
-Using what they now know about creating functions and passing down props, have students create a simple TODO list app:
+Using what they now know about creating functions and passing down props, have students create a simple TODO list app using a new react template:
 
     1. Create a component with a button and an input
     2. Create a list component
@@ -91,3 +91,13 @@ Have the class look up `componentDidReceiveProps`, `ComponentDidMount` && `compo
 Have students create an input and button to interact with this API:
 
 A user should select what kind of crime they want displayed using radio buttons then a click should fire off the API request using axios. 
+
+Here are the types of crime you can look up using this API: (must be capitalized)
+
+VANDALISM
+ROBBERY
+DRUG/NARCOTIC
+VEHICLE THEFT
+ASSAULT
+
+Refer to `react-axios-solved` as this project can be quite tricky, especially the radio buttons.

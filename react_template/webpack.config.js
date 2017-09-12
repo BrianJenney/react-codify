@@ -16,7 +16,12 @@ var config = {
            loaders: [
              'babel-loader?presets[]=react,presets[]=es2015,presets[]=stage-2' //babel is what transpiles our jsx code into javascript
            ]
-         }
+         },
+         ,
+         {
+          test: /\.(png|jpg)$/,
+          loader: 'file-loader'
+        }
        ]
      }
 }
