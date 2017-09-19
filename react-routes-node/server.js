@@ -1,10 +1,12 @@
 const express = require('express')
 const app = express();
+const routes = require("./routes");
 const mongo = require('mongodb');
 const mongoose = require("mongoose");
+
 const uri = 'mongodb://brianjenney:freestyl1@ds115701.mlab.com:15701/react';
 
-app.listen(process.env.PORT || 8081);
+//mongoose.connect(uri);
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -12,6 +14,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.listen(process.env.PORT || 8081);
 
 //ROUTES
-require('./routes/register.js')(app);
+app.use(routes);

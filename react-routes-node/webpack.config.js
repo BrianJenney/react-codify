@@ -1,7 +1,7 @@
 require('./server.js');
 
 var config = {
-   entry: './index.js', //our point of entry that renders our react components
+   entry: './components/index.js', //our point of entry that renders our react components
    output: {
       filename: 'bundle.js'//here is where our jsx will be transpiled to actual js that can live in our browser
    },
