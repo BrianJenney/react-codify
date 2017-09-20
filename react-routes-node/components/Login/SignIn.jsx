@@ -24,8 +24,14 @@ onChange =(e)=>{
 };
 
 submitUser=()=>{
-  
-  axios.post('http://localhost:8081/api/user/createuser/' + this.state).then((response)=>{
+  console.log(this.state);
+
+  // axios.get('http://localhost:8081/api/user/register').then((response)=>{
+  //   console.log(response);
+  // });
+
+
+  axios.post('http://localhost:8081/api/user/createuser/', this.state).then((response)=>{
     if(typeof response.data.errors !== `undefined`){ 
       console.log(response.data.message);
       this.setState({error: response.data.message});

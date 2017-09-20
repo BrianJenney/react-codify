@@ -1,5 +1,3 @@
-require('./server.js');
-
 var config = {
    entry: './components/index.js', //our point of entry that renders our react components
    output: {
