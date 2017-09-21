@@ -1,6 +1,9 @@
 
 import React from 'react';
 import axios from 'axios';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as loginActions from '../../actions/login';
 import { createHashHistory } from 'history'
 
 const history = createHashHistory();
@@ -24,20 +27,16 @@ onChange =(e)=>{
 };
 
 submitUser=()=>{
-  console.log(this.state);
-
-  // axios.get('http://localhost:8081/api/user/register').then((response)=>{
-  //   console.log(response);
-  // });
-
-
-  axios.post('http://localhost:8081/api/user/createuser/', this.state).then((response)=>{
+  axios.post('http://localhost:8081/api/user/verify/', this.state).then((response)=>{
     if(typeof response.data.errors !== `undefined`){ 
-      console.log(response.data.message);
       this.setState({error: response.data.message});
-    }else{
-      this.props.history.push(`/about`)
     }
+    
+    //get whether user is new or returning
+    const userType = response.data.userType;
+
+    userType === 'new' ? this.props.history.push(`/profile`) : this.props.history.push(`/properties${userType}`);
+
   })
 };
 
@@ -45,7 +44,7 @@ render(){
   return(
     <div>
 
-     <div className="col-lg-6">
+     <div className="col-lg-6 col-md-offset-3">
        <div className="input-group">
 
         <input 
@@ -78,4 +77,15 @@ render(){
 
 }
 
-export default SignIn;
+function mapStateToProps(state, props) {
+    return {
+        login: state.login
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(loginActions, dispatch)
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);
+
