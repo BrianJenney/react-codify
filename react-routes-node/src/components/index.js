@@ -16,7 +16,7 @@ ReactDOM.render(
     <Router>
       <div>
         <Route exact path="/" component={SignIn} />
-        <Route path="/register" component={Register} />
+        <Route path="/profile" component={Register} />
         {/* <Route path="/register" component={Register} /> */}
       </div>
     </Router >

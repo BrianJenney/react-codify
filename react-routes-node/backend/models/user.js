@@ -6,12 +6,6 @@ var Schema = mongoose.Schema;
 
 // Instantiate a userSchema object with the Schema class we just made
 var UserSchema = new Schema({
-  // username is a string. We will trim any trailing whitespace. It's also required
-  username: {
-    type: String,
-    trim: true,
-    required: "Username is Required"
-  },
   // password is a string. We will trim any trailing whitespace. It's also required
   // It has a custom validate function that checks the length of the input
   // If it's less than six chars, mongoose will throw an error
@@ -30,8 +24,19 @@ var UserSchema = new Schema({
   // Notice how it must match our regex, which checks for email
   email: {
     type: String,
+    trim: true,
     unique: true,
     match: [/.+\@.+\..+/, "Please enter a valid e-mail address"]
+  },
+  income:{
+    type: Number
+  },
+  SSN:{
+    type: Number,
+    unique: true
+  },
+  userType:{
+    type: String
   },
   // This will make a userCreated entry in our doc, by default the current time string.
   userCreated: {

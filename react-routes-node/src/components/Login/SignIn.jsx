@@ -14,53 +14,118 @@ constructor(props){
   super(props)
 
   this.state = {
+    income:0,
+    SSN:0,
+    userType: '',
     password: '',
-    username: '',
-    error: '' 
+    error: '',
+    display: 'none'
   }
 };
 
-onChange =(e)=>{
+onChange=(e)=>{
   let user = {};
   user[e.target.id] = e.target.value;
   this.setState(user);
 };
 
 submitUser=()=>{
-  axios.post('http://localhost:8081/api/user/verify/', this.state).then((response)=>{
+  axios.post('http://localhost:8081/api/user/registeruser/', this.state).then((response)=>{
     if(typeof response.data.errors !== `undefined`){ 
       this.setState({error: response.data.message});
     }
+    console.log(response);
     
     //get whether user is new or returning
     const userType = response.data.userType;
-
-    userType === 'new' ? this.props.history.push(`/profile`) : this.props.history.push(`/properties${userType}`);
-
   })
 };
+
+showRegister=()=>{
+  console.log(this.state.display);
+  if(this.state.display === 'block')
+    this.setState({display: 'none'})
+  else
+    this.setState({display: 'block'})
+};
+
 
 render(){
   return(
     <div>
 
-     <div className="col-lg-6 col-md-offset-3">
-       <div className="input-group">
+     <div className="col-xs-6 col-xs-offset-3">
+        <br/>
+        <br/>
+        <div className="input-group">
+            <span className="input-group-addon" 
+            id="basic-addon1">Email</span>
+            <input 
+            onChange={this.onChange.bind(this)}
+            id="email"
+            type="text"
+            className="form-control">
+            </input>
+        </div>
 
-        <input 
-        id="username"
-        onChange={this.onChange.bind(this)}
-        className="form-control" 
-        placeholder="userName">
-        </input>
+        <br/>
 
-        <input 
-        id="password"
-        onChange={this.onChange.bind(this)}
-        className="form-control" 
-        placeholder="passWord">
-        </input>
-        
+        <div className="input-group">
+            <span className="input-group-addon" 
+            id="basic-addon1">Password</span>
+            <input 
+            onChange={this.onChange.bind(this)}
+            id="password"
+            maxLength="8"
+            type="password"
+            className="form-control">
+            </input>
+          </div>
+
+          <br/>
+
+          <span 
+          onClick={this.showRegister}>New User?</span>
+
+          <br/>
+
+        <div style={{display: this.state.display}}>
+
+         <div className="input-group">
+            <span className="input-group-addon" 
+            id="basic-addon1">SSN</span>
+            <input 
+            onChange={this.onChange.bind(this)}
+            id="SSN"
+            maxLength="8"
+            type="password"
+            className="form-control" 
+            placeholder="ex: 12345678">
+            </input>
+          </div>
+
+          <br/>
+
+          <div className="input-group">
+            <span className="input-group-addon" 
+            id="basic-addon1">Income</span>
+            <input 
+            onChange={this.onChange.bind(this)}
+            type="number"
+            id="income"
+            className="form-control">
+            </input>
+          </div>
+
+          <br/>
+
+          <div className="radio">
+            <label><input type="radio" name="optradio"></input>Buyer</label>
+          </div>
+          <div className="radio">
+            <label><input type="radio" name="optradio"></input>Seller</label>
+          </div>
+
         </div>
 
         <p>{this.state.error}</p>
@@ -69,7 +134,7 @@ render(){
             className="btn btn-primary"
             type="button"
             onClick={this.submitUser}>Go!</button>
-     </div>
+      </div>
 
     </div>
   )
@@ -77,15 +142,16 @@ render(){
 
 }
 
-function mapStateToProps(state, props) {
+function mapStateToProps(state){
     return {
-        login: state.login
+        cart: state.login
     };
-}
+};
+
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(loginActions, dispatch)
     }
-}
+};
 export default connect(mapStateToProps, mapDispatchToProps)(SignIn);
 
