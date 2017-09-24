@@ -2,8 +2,9 @@ const db = require("../models");
 
 module.exports = {
   login: function(req, res) { //is user in DB ? verify : add new user
-    if(db.User.find({userName : req.body.username}).count() > 0){
-      res.send({user: 'old'}); 
+    console.log(req.body.email);
+    if(db.User.find({email : req.body.email})){
+      res.send({user: 'verified'}); 
     }
   },
   register: function(req, res){

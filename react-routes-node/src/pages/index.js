@@ -5,21 +5,25 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Store from '../store';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 const StoreInstance = Store();
 
 //we import our component from our component folder to use here
 import SignIn from './Login/SignIn';
-import Register from './Profile/register';
+import AddProp from './AddProperty/AddProp';
 
 ReactDOM.render(
+  <MuiThemeProvider>
   <Provider store={StoreInstance}>
     <Router>
       <div>
         <Route exact path="/" component={SignIn} />
-        <Route path="/profile" component={Register} />
+        <Route path="/addproperty" component={AddProp} />
         {/* <Route path="/register" component={Register} /> */}
       </div>
     </Router >
-  </Provider>,
+  </Provider>
+  </MuiThemeProvider>,
   document.getElementById('app')
 );

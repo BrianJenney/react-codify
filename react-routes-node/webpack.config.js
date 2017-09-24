@@ -1,5 +1,5 @@
 var config = {
-   entry: './src/components/index.js', //our point of entry that renders our react components
+   entry: './src/pages/index.js', //our point of entry that renders our react components
    output: {
       filename: 'bundle.js'//here is where our jsx will be transpiled to actual js that can live in our browser
    },
