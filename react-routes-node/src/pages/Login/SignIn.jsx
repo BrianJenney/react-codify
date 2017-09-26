@@ -28,8 +28,6 @@ constructor(props){
   };
 };
 
-
-
 onChange=(e)=>{
   let user = {};
   user[e.target.id] = e.target.value;
