@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
@@ -30,13 +31,28 @@ class AddProp extends React.Component {
   };
 
   submitPic=()=>{
-    axios.post("http://localhost:8081/api/pics/submit/" + this.state).then(function(response){
-      console.log(response);
+
+    console.log(this.props.id);
+
+    const picItem = {
+      userid: this.props.id,
+      imgUrl: this.state.imgUrl,
+      price: this.state.price,
+      city: this.state.city,
+      state: this.state.state,
+      zip: this.state.zip 
+    }
+
+    axios.post("http://localhost:8081/api/pics/upload/", picItem).then(function(response){
+      console.log(response.data);
     });
   };
 
    render() {
+     
       return (
+
+        
          <div>
 
             <div className="text-center">
@@ -88,6 +104,7 @@ class AddProp extends React.Component {
               <RaisedButton 
               primary={true}
               label="Add Property"
+              onClick={this.submitPic}
               disabled={this.state.price < 1 || this.state.city.length < 1 || this.state.zip.toString().length < 5 || this.state.imgUrl.length < 3}/>
                 
             </div>

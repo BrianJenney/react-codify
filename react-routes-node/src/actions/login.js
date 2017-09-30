@@ -1,5 +1,4 @@
 export const login = (user) => {
-    console.log('adding item:', user);
     return {
         type: 'ADD',
         loggedIn: user.isLogged,

@@ -36,22 +36,23 @@ onChange=(e)=>{
 
 submitUser=()=>{
 
-  // const user={
-  //     loggedIn: true,
-  //     name: this.state.email,
-  //     id: 1
-  //   };
-
-  //   this.props.actions.login(user); 
-  //   this.props.history.push("/addproperty");
-  // return;
-
   axios.post('http://localhost:8081/api/user/login/', this.state).then((response)=>{
     if(typeof response.data.errors !== `undefined`){ 
       this.setState({error: response.data.message});
+      return;
     }
-    //get whether user is new or returning
-    const userType = response.data.userType;
+
+    console.log(response);
+  
+    const user={
+      isLogged: true,
+      name: this.state.email,
+      id: response.data[0]._id
+    };
+
+    this.props.actions.login(user); 
+    this.props.history.push("/nav");
+
   })
 };
 

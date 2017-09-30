@@ -12,6 +12,8 @@ const StoreInstance = Store();
 //we import our component from our component folder to use here
 import SignIn from './Login/SignIn';
 import AddProp from './AddProperty/AddProp';
+import Nav from './Nav/NavPage';
+import Listings from './Listings/BrowseHomes';
 
 ReactDOM.render(
   <MuiThemeProvider>
@@ -20,7 +22,8 @@ ReactDOM.render(
       <div>
         <Route exact path="/" component={SignIn} />
         <Route path="/addproperty" component={AddProp} />
-        {/* <Route path="/register" component={Register} /> */}
+        <Route path="/nav" component={Nav} /> 
+        <Route path="/listings" component={Listings}/>
       </div>
     </Router >
   </Provider>

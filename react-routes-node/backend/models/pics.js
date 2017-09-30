@@ -7,16 +7,27 @@ var Schema = mongoose.Schema;
 var PicsSchema = new Schema({
 
   //id of user who posted
-  id: {
-    type: Number
+  userid: {
+    type: String
   },
 
   //url of pic
-  url: {
+  imgUrl: {
     type: String,
     trim: true
-  }
+  },
 
+  zip:{
+    type: Number
+  },
+
+  price: {
+    type: Number
+  },
+
+  city: {
+    type: String
+  }
 });
 
 // Create the "User" model with our UserSchema schema
