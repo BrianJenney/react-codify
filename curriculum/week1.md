@@ -26,6 +26,8 @@ Third, the learning curve can be steep! React is not a library you will learn in
 
 **Go through webpack, babel, ES6, file structure for a react project and answer questions along the way (30 mins):**
 
+Open up `react-starter`
+
 Navigate to `webpack.config.js`. Students will likely be confused by webpack - do not spend much time on webpack. Students should understand that it is boiler plate to bundle up all their dependencies, run their server and transpile all their JSX to their `bundle.js` file. 
 
 Point out that there actually is no `bundle.js` file in our project -- that's because babel creates this file for us from our webpack on the fly so any browser can render our jsx.
@@ -70,7 +72,7 @@ Have students take notice of how we add inline styling in React. They should not
 
 Project Time: (60 mins)
 
-To run this app, navigate to the project and `npm start`
+To run this app, navigate to the project and `npm install` && `npm start`
 
 For students using Windows, they may need to `npm install webpack -g` in order for this project to work. 
 
@@ -91,6 +93,8 @@ For the rest of class, have students create at least three more components (with
 **Break (15mins)**
 
 In class project: 
+
+Slack out `react-template`
 
 Create a new project by copying the one we just did.
 
