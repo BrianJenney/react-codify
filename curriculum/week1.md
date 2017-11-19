@@ -34,7 +34,11 @@ What is Babel?
 
 Babel is a transpiler that takes our super new, cool ES6,ES7,ES8, etc and converts it to ES5 syntax so nearly all browsers can run our Javascript. Some students may remember the tower of Babel from the Bible (the origin myth of why we all speak different languages) -- this is what Babel does, unifies all of the different syntaxes or languages and pops out a uniform JS syntax all browsers are happy with. 
 
-To show students the power of Babel, open up the code for react-starter and then run the project `npm start`. 
+To show students the power of Babel, open up the code for react-starter and then run the project. First you will need to `npm install` and then `npm start`. 
+
+***
+YOU MAY ALSO NEED TO RUN THIS COMMAND:  (may need to use super user or `sudo`) -- `npm install webpack-dev-server -g`
+***
 
 Using your browser tools, inspect the first element on the page. Wait! It doesn't look anything like the code that is in the editor?! This is the power of Babel in action. It has taken our React JSX and made html components.
 
