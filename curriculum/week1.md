@@ -94,9 +94,29 @@ For the rest of class, have students create at least three more components (with
 
 In class project: 
 
-Slack out `react-template`
+**Installing create-react-app**
 
-Create a new project by copying the one we just did.
+create-react-app is an awesome package which allows us top create a react project in a little time without having to worry about webpack and all that jazz.
+
+In the console:
+
+`npm install create-react-app -g`
+
+`-g` will install create-react-app globally
+
+**Creating a New App with create-react-app**
+
+In the console:
+
+Navigate to a directory where you want your new project to live
+
+`create-react-app <name of your app>` (eg. create-react-app my-app)
+
+Once done, your project will be ready and you will see instructions on how to start the project:
+
+Example: 
+`cd my-app` 
+`npm start`
 
 Create a website using React that has the following: 
 

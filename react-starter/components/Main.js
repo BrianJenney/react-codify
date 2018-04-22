@@ -7,9 +7,13 @@ class Main extends React.Component {
 
    render() {
       return (
-         <div className='jumbotron'>
-            <HelloWorld/>
-         </div>
+          <div>
+
+            <div className='jumbotron'>
+                <HelloWorld/>
+            </div>
+            
+          </div>
       );
    }
 }

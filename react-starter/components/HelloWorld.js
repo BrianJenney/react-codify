@@ -13,7 +13,10 @@ class HelloWorld extends React.Component {
 
     //state is our data being held in this component
     //in this case it will be your name
-    this.state={yourName: 'Codify Student'};
+    this.state = {
+      yourName: 'Brian J!',
+      favoriteFood: 'Crispy Tacos'
+    };
   }
 
   //this is our render function where the action takes place!
@@ -22,7 +25,9 @@ class HelloWorld extends React.Component {
    render() {
       return (
          <div>
-            <h1 style={{textAlign: 'center'}}>Hello {this.state.yourName}!</h1>
+            <h1 style={{textlign: 'center'}}>Hello {this.state.yourName}!</h1>
+
+            <p>My favorite food is {this.state.favoriteFood.toUpperCase()}</p>
          </div>
       );
    }
