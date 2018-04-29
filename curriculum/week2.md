@@ -125,4 +125,4 @@ Using what they now know about creating functions and passing down props, have s
 
     1. Prevent users from adding empty items by disabling the button if nothing has been entered
     2. Add functionality to allow users to delete from the list
-    3. Style!!!
+    3. Style!!! 
